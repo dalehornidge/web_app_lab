@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }} - Our Inventory</title>
+</head>
+<body>
+    <h1>Here are our current orders!</h1>
+    {% for order in orders %}
+    <div>
+        <p>
+           <a href="orders/{{order.order_number}}">{{order.customer_name}}:</a> <b>{{order.book_title}}</b>
+        </p>
+    </div>
+    {% endfor %}
+<a href="/templates/order.html">Order</a>
+</body>
+</html>
